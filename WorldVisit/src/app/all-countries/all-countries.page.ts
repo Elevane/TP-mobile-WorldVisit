@@ -39,7 +39,9 @@ export class AllCountriesPage implements OnInit {
     const val = input.value;
     console.log(val);
     if (val && val != '') {
-      this.res = this.res.filter(item => item.name.toLowerCase() == val.toLowerCase())
+      this.res = this.res.filter(
+        item => item.name.toLowerCase().indexOf(val.toLowerCase()) > -1
+     )
     }else{
       this.getApiCountries();
     }
