@@ -4,5 +4,5 @@ export interface Country {
   region: string;
   id: string;
   CountryCode: string;
-  visitDate: string;
+  visitDate: Date;
 }

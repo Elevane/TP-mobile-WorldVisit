@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Country } from 'src/models/country.model';
 
@@ -7,13 +7,10 @@ import { Country } from 'src/models/country.model';
   templateUrl: './country.component.html',
   styleUrls: ['./country.component.scss'],
 })
-export class CountryComponent implements OnInit {
+export class CountryComponent {
   @Input() country: Country;
 
   constructor(private firebase: AngularFirestore) {}
-
-  ngOnInit() {
-  }
 
   isIos() {
     const win = window as any;

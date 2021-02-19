@@ -10,7 +10,7 @@ import { NavigationExtras, Router } from '@angular/router';
 
 export class AllCountriesPage implements OnInit {
 
-  private res;
+  public res;
   value: string = "";
   constructor(private http: HttpClient,  private router: Router) { }
 

@@ -5,7 +5,7 @@
       <div class="flagContainer">
         <img src="../../assets/icon/favicon.png" alt="Country flag" />
         <span class="subText">
-          <ion-note>{{ country.visitDate }}</ion-note>
+          <ion-note>{{ country.visitDate | date: "dd/MM/yy" }}</ion-note>
         </span>
       </div>
       <div class="textContainer">
@@ -20,7 +20,12 @@
         </span>
       </div>
       <div class="deleteContainer">
-        <ion-icon name="trash" size="large" *ngIf="isIos()" (click)="deleteCountry()"></ion-icon>
+        <ion-icon
+          name="trash"
+          size="large"
+          *ngIf="isIos()"
+          (click)="deleteCountry()"
+        ></ion-icon>
       </div>
     </div>
   </ion-label>
