@@ -1,0 +1,27 @@
+<ion-item *ngIf="country" [detail]="false">
+  <div slot="start"></div>
+  <ion-label class="ion-text-wrap">
+    <div class="container">
+      <div class="flagContainer">
+        <img src="../../assets/icon/favicon.png" alt="Country flag" />
+        <span class="subText">
+          <ion-note>{{ country.visitDate }}</ion-note>
+        </span>
+      </div>
+      <div class="textContainer">
+        <h2>
+          {{ country.name }}
+        </h2>
+        <span class="subText">
+          <ion-note>Capitale : {{ country.capital }}</ion-note>
+        </span>
+        <span class="subText">
+          <ion-note>Continent : {{ country.region }}</ion-note>
+        </span>
+      </div>
+      <div class="deleteContainer">
+        <ion-icon name="trash" size="large" *ngIf="isIos()" (click)="deleteCountry()"></ion-icon>
+      </div>
+    </div>
+  </ion-label>
+</ion-item>
