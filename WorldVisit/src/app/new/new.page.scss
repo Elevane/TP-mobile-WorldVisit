@@ -16,3 +16,14 @@
     color: white;
     text-align: left;
 }
+
+#ajouter, #ajouter button{
+    width: 100%;
+    border: none;
+    border-radius: none;
+    float:  bottom;
+    --background: 	green;
+}
+.button-solid{
+    --background: 	green;
+}

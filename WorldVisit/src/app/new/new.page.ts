@@ -9,7 +9,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class NewPage implements OnInit {
   data: any;
-  @ViewChild('dateTime') datePicker;
+  date: any;
+  country:any;
+
   constructor(private route: ActivatedRoute, private router: Router, private firebase: AngularFirestore) {
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
@@ -23,19 +25,23 @@ export class NewPage implements OnInit {
   }
 
     
+  sendCountry(){
 
-
-  dateProcess(date){
-    console.log(date);
-    const country = {
+    this.country = {
       name : this.data.name,
       capital : this.data.capital,
       region: this.data.region,
       countryCode: this.data.alpha2Code,
-      visitDate : date.detail.value,
+      visitDate : this.date,
     }
     
-    this.firebase.collection('country').add(country);
+    this.firebase.collection('country').add(this.country);
     this.router.navigate(['home']);
+  }
+
+  dateProcess(date){
+    console.log(date);
+    this.date = date.detail.value;
+    
   }
 }
