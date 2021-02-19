@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Inbox
+    <ion-title class="title">
+      WorldVisit
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -19,7 +19,5 @@
     </ion-toolbar>
   </ion-header>
   
-  <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
-  </ion-list>
+  <ion-button (click)="navigate()" >Ajouter</ion-button>
 </ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title" lot="start">WorldVisit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <form>
+        <ion-row>
+          <ion-input id="search" type="text"></ion-input><ion-button  class="no_border" expand="block" (click)="getInput()">Ok</ion-button>
+        </ion-row>
+      </form>
+      <ion-item  (click)="AddToPersonnal(item)" *ngFor="let item of res"> 
+        <ion-thumbnail slot="start">
+          <ion-img [src]="item.imgsrc"></ion-img>
+        </ion-thumbnail>
+        <ion-label  class="ion-text-wrap">
+          <h2>
+            {{item.name}}
+          </h2>
+          <ion-col class="details">
+            <ion-note>Capitale : {{item.capital}}</ion-note>
+            <ion-note>Contient : {{item.region}}</ion-note>
+          </ion-col>
+        </ion-label>
+      </ion-item>
+    </ion-list  >
+</ion-content>
