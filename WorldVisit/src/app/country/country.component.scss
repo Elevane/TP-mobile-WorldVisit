@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    &.flagContainer {
+      flex: 25%;
+      justify-content: center;
+
+      * {
+        margin: auto;
+      }
+
+      img {
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
+
+    &.textContainer {
+      flex: 60%;
+      justify-content: center;
+      padding-left: 5%;
+    }
+
+    &.deleteContainer {
+      flex: 15%;
+      justify-content: center;
+      ion-icon {
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+ion-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+}
+
+ion-label {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+ion-item h2 {
+  font-weight: 600;
+  margin: 0;
+}
+
+ion-item ion-note {
+  font-size: 15px;
+  margin-right: 8px;
+  font-weight: normal;
+}
