@@ -1,0 +1,7 @@
+{
+  "name": "WorldVisit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
