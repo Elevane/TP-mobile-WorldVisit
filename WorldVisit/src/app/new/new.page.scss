@@ -9,10 +9,21 @@
   background-color: lightgrey;
 }
 
-.title {
-  background-color: #000080;
-  padding: 5%;
-  font-size: 15px;
-  color: white;
-  text-align: left;
+.title{
+    background-color: 	#000080;
+    padding: 5%;
+    font-size: 15px;
+    color: white;
+    text-align: left;
+}
+
+#ajouter, #ajouter button{
+    width: 100%;
+    border: none;
+    border-radius: none;
+    float:  bottom;
+    --background: 	green;
+}
+.button-solid{
+    --background: 	green;
 }

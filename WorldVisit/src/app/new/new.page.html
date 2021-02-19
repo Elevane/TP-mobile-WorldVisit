@@ -6,13 +6,17 @@
 
 <ion-content>
   <ion-card-title *ngIf="data"> {{ data.name }} </ion-card-title>
-
+  
   <ion-item>
     <ion-label>Date</ion-label>
     <ion-datetime
+      min="2020" max="2099-10-31"
       (ionChange)="dateProcess($event)"
       id="dateInput"
       display-timezone="utc"
     ></ion-datetime>
   </ion-item>
+  <ion-footer>
+    <ion-button id="ajouter" class="no_border" (click)="sendCountry()" >Valider</ion-button>
+  </ion-footer>
 </ion-content>
