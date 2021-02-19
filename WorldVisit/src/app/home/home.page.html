@@ -1,8 +1,6 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title class="title">
-      WorldVisit
-    </ion-title>
+    <ion-title class="title" lot="start">WorldVisit</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,7 +16,7 @@
       [country]="country"
     ></app-country>
   </ion-list>
-  <ion-button (click)="navigate()" >Ajouter</ion-button>
+  <ion-button id="ajouter" class="no_border" (click)="navigate()" >Ajouter</ion-button>
 </ion-content>
 
  

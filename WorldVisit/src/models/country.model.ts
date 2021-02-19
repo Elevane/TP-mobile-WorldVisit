@@ -3,6 +3,6 @@ export interface Country {
   capital: string;
   region: string;
   id: string;
-  CountryCode: string;
+  countryCode: string;
   visitDate: string;
 }
