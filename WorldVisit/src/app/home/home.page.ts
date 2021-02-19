@@ -1,22 +1,29 @@
 import { Component } from '@angular/core';
-import { DataService, Message } from '../services/data.service';
 import { Router } from '@angular/router';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Country } from 'src/models/country.model';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(private data: DataService, private router: Router) {}
+  countries: Array<any>;
+  constructor(private firebase: AngularFirestore,  private router: Router) {}
 
-  refresh(ev) {
-    setTimeout(() => {
-      ev.detail.complete();
-    }, 3000);
+  ngOnInit() {
+    this.getCountries();
   }
 
-  getMessages(): Message[] {
-    return this.data.getMessages();
+  getCountries() {
+    this.firebase
+      .collection('country')
+      .valueChanges({ idField: 'id' })
+      .subscribe((res) => {
+        this.countries = res;
+        console.log(this.countries);
+      });
   }
   
   navigate(){
