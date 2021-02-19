@@ -3,7 +3,9 @@
   <ion-label class="ion-text-wrap">
     <div class="container">
       <div class="flagContainer">
-        <img src="../../assets/icon/favicon.png" alt="Country flag" />
+        <ion-thumbnail slot="start">
+          <ion-img [src]="imgsrc"></ion-img>
+        </ion-thumbnail>
         <span class="subText">
           <ion-note>{{ country.visitDate | date: "dd/MM/yy" }}</ion-note>
         </span>

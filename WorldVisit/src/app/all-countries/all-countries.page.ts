@@ -34,7 +34,7 @@ export class AllCountriesPage implements OnInit {
     this.router.navigate(["new"], navigationExtras);
   }
 
-  getInput(e){
+  getInput(){
     var input = document.getElementById('search').querySelector('input');
     const val = input.value;
     console.log(val);

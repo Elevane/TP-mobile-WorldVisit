@@ -8,7 +8,7 @@
     <ion-list>
       <form>
         <ion-row>
-          <ion-input value="chercher" (input)="getInput(input)" id="search" type="text"></ion-input>
+          <ion-input (input)="getInput()" id="search" type="text" placeholder="Chercher"></ion-input>
         </ion-row>
       </form>
       <ion-item  (click)="AddToPersonnal(item)" *ngFor="let item of res"> 
